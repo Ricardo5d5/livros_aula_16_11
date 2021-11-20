@@ -15,7 +15,7 @@
         <body>
             <main class="container">
                 <h1>livros</h1>
-                <a href="/livro/insert" class="btn btn-info">Novo livro</a>
+                <a href="/livro/insert" class="btn btn-primary">Novo livro</a>
                 <table>
                     <tr>
                         <th>ID</th>
@@ -25,6 +25,8 @@
                         <tr>
                             <td>${l.id}</td>
                             <td>${l.titulo}</td>
+                            <td><a href="/livro/update/${l.id}" class="btn btn-primary">Atualizar livro</a></td>
+                            <td><a href="/livro/delete/${l.id}" class="btn btn-danger">Deletar livro</a></td>
                         </tr>
 
                     </c:forEach>
