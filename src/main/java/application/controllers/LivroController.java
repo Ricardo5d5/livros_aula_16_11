@@ -16,12 +16,12 @@ import org.springframework.ui.Model;
 @RequestMapping("/livro") //A anotação @RequestMapping indica que o controlador, que neste caso é a classe "LivroController", receberá as requisições feitas à URL www.DNS_da_aplicação/LivroController.
 public class LivroController {  //
   @Autowired  //A anotação @Autowired permite que você pule as configurações em outro lugar do que injetar e faça isso por você.
-  private LivroRepository livrosRepo;
+  private LivroRepository livrosRepo; //
 
-  @RequestMapping("/list")
+  @RequestMapping("/list")  //O método "list" também está anotado com a anotação @RequestMapping, indicando que esse método irá receber as requisições feitas a URL www.DNS_da_aplicação/cliente sempre que se tratar de uma requisição HTTP GET.
   public String list(Model model) {
     model.addAttribute("livros", livrosRepo.findAll());
-    return "list.jsp";
+    return "list.jsp";  //pena no da Karin
   }
 
   public String listar() {
