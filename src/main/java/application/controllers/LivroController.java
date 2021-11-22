@@ -12,10 +12,10 @@ import application.repositories.LivroRepository;
 
 import org.springframework.ui.Model;
 
-@Controller
-@RequestMapping("/livro")
-public class LivroController {
-  @Autowired
+@Controller //A anotação @Controller indica que a classe é um “Controller” controlador, atuando como um estereótipo para a classe anotada, indicando o seu papel (dentro do contexto do padrão MVC ele é o 'C').
+@RequestMapping("/livro") //A anotação @RequestMapping indica que o controlador, que neste caso é a classe "LivroController", receberá as requisições feitas à URL www.DNS_da_aplicação/LivroController.
+public class LivroController {  //
+  @Autowired  //A anotação @Autowired permite que você pule as configurações em outro lugar do que injetar e faça isso por você.
   private LivroRepository livrosRepo;
 
   @RequestMapping("/list")
