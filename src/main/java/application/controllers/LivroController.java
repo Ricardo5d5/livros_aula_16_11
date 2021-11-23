@@ -52,7 +52,7 @@ public class LivroController {  // Cria a classe pública LivroController e abre
       return "redirect:/livro/list"; // Retorna um redirecionamento para voltar pra lista após a exclusão.
     model.addAttribute("livro", livro.get()); // Adiciona o atributo livro ao model e preenche com o livro obtido.
 
-    return "/livro/delete.jsp"; //********Redireciona para a página de exclusão.
+    return "/livro/delete.jsp"; //Redireciona para a página de exclusão.
 
   }
 
@@ -64,25 +64,25 @@ public class LivroController {  // Cria a classe pública LivroController e abre
   }
 
   // atualizando os dados via formulário
-  @RequestMapping("/update/{id}")
-  public String formUpdate(Model model, @PathVariable int id) {
-    Optional<Livro> livro = livrosRepo.findById(id);
-    if (!livro.isPresent())
-      return "redirect:/livro/list";
-    model.addAttribute("livro", livro.get());
+  @RequestMapping("/update/{id}") // Anotação para mapear solicitações da web em métodos em classes de tratamento de solicitações com assinaturas de método flexíveis, marca como essa função pode ser acessada pela web.
+  public String formUpdate(Model model, @PathVariable int id) { // Cria uma função de retorno público de tipo String com o nome formUpdate, que recebe o id do livro e o modelo como parâmetro, essa função serve para confirmar se é possível atualizar títulos do repositório.
+    Optional<Livro> livro = livrosRepo.findById(id);  // Busca o livro pelo id e marca campo como opcional pra caso o id não seja encontrado.
+    if (!livro.isPresent()) // Define se o livro não for presente, o usuário será redirecionado de volta pra página que está.
+      return "redirect:/livro/list";  // Retorna um redirecionamento para voltar pra lista após a atualização.
+    model.addAttribute("livro", livro.get()); // Adiciona o atributo livro ao model e preenche com o livro obtido.
     // return "redirect:/livro/update.jsp";
-    return "/livro/update.jsp";
+    return "/livro/update.jsp"; // Redireciona para a página de atualização.
   }
 
-  @RequestMapping(value = "/update", method = RequestMethod.POST)
-  public String saveUpdate(@RequestParam("titulo") String titulo, @RequestParam("id") int id) {
-    Optional<Livro> livro = livrosRepo.findById(id);
-    if (!livro.isPresent())
-      return "redirect:/livro/list";
-    livro.get().setTitulo(titulo);
-    livrosRepo.save(livro.get());
+  @RequestMapping(value = "/update", method = RequestMethod.POST) // Anotação para mapear solicitações da web em métodos em classes de tratamento de solicitações com assinaturas de método flexíveis, marca como essa função pode ser acessada pela web e seu método.
+  public String saveUpdate(@RequestParam("titulo") String titulo, @RequestParam("id") int id) { // Cria uma função de retorno público de tipo String com o nome confirmDelete, que recebe o id do livro como parâmetro, essa função serve para atualizar títulos do repositório.
+    Optional<Livro> livro = livrosRepo.findById(id);  // Busca o livro pelo id e marca campo como opcional pra caso o id não seja encontrado.
+    if (!livro.isPresent()) // Define se o livro não for presente, o usuário será redirecionado de volta pra página que está.
+      return "redirect:/livro/list";  // Retorna um redirecionamento para voltar pra lista após a atualização.
+    livro.get().setTitulo(titulo);  // Obtém o livro e atualiza seu título.
+    livrosRepo.save(livro.get()); // Salva o livro no repositório.
 
-    return "redirect:/livro/list";
+    return "redirect:/livro/list";  // Redireciona o usuário de volta pra lista de livros.
 
   }
 }
