@@ -15,7 +15,7 @@ import org.springframework.ui.Model;
 @Controller //A anotação @Controller indica que a classe é um “Controller” controlador, atuando como um estereótipo para a classe anotada, indicando o seu papel (dentro do contexto do padrão MVC ele é o 'C').
 @RequestMapping("/livro") //A anotação @RequestMapping indica que o controlador, que neste caso é a classe "LivroController", receberá as requisições feitas à URL www.DNS_da_aplicação/LivroController.
 public class LivroController {  //
-  @Autowired  //A anotação @Autowired permite que você pule as configurações em outro lugar do que injetar e faça isso por você.
+  @Autowired  //O Autowired (@Autowired) é a anotação mais utiliza com relação a injeção de dependências. Como o próprio nome diz, o Autowired, indica um ponto aonde a injeção automática deve ser aplicada.
   private LivroRepository livrosRepo; //Cria um objeto privado chamado livrosRepo do tipo LivroRepository.
 
   @RequestMapping("/list")  //O método "list" também está anotado com a anotação @RequestMapping, indicando que esse método irá receber as requisições feitas a URL www.DNS_da_aplicação/cliente sempre que se tratar de uma requisição HTTP GET.
