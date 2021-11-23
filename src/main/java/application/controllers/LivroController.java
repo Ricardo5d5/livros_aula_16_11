@@ -22,17 +22,17 @@ public class LivroController {  // Cria a classe pública LivroController e abre
   @RequestMapping("/list")  // ****O método "list" também está anotado com a anotação @RequestMapping, indicando que esse método irá receber as requisições feitas a URL www.DNS_da_aplicação/LvroController sempre que se tratar de uma requisição HTTP GET.
   public String list(Model model) { // Cria uma função de retorno público de tipo String com o nome "list", com o parâmetro model do tipo Model, que serve para listar todos livros.
     model.addAttribute("livros", livrosRepo.findAll()); // Adiciona o atributo "livros" ao modelo e preenche com todos livros do "livrosRepo".
-    return "list.jsp";  // Indica o retorno o endereço do arquivo "list.jsp".
+    return "list.jsp";  // Indica o retorno do nome do arquivo "list.jsp".
   }
 
   public String listar() {  // Cria uma função de retorno público de tipo String com o nome "listar: , sem parâmetros, que serve para listar todos livros dentro do "/livro".
-    return "livro/list.jsp";  //*********Retorna uma string referente à página que redirecionar ao método responsável pela listagem.
+    return "livro/list.jsp";  // Indica o retorno do endereço "livro/list.jsp" do arquivo "list.jsp".
   }
 
   @RequestMapping("/insert")  // Anotação para mapear solicitações da web em métodos em classes de tratamento de solicitações com assinaturas de método flexíveis.
 
-  public String formInsert() {  // Cria uma função de retorno público de tipo String com o nome listar, sem parâmetros, que serve para listar todos livros dentro do "/livro".
-    return "insert.jsp";  // Indica o retorno do arquivo "insert.jsp", Retorna uma string referente à página que mostrará os dados obtidos.
+  public String formInsert() {  // ****Cria uma função de retorno público do tipo String com o nome "formInsert", sem parâmetros, que serve para inserir livros dentro do "/livro".
+    return "insert.jsp";  // Indica o retorno do nome do arquivo "insert.jsp".
   }
 
   // inserindo os dados via formulário
@@ -41,7 +41,7 @@ public class LivroController {  // Cria a classe pública LivroController e abre
     Livro livro = new Livro();  // Cria uma instância do objeto chamado livro do tipo Livro.
     livro.setTitulo(titulo);  // Define o título do livro com o parâmetro recebido.
     livrosRepo.save(livro); // Salva o livro no repositório.
-    return "redirect:/livro/list";  // Retorna um redirecionamento pra voltar para lista após a inserção.
+    return "redirect:/livro/list";  // Retorna um redirecionamento para voltar para lista após a inserção.
   }
 
   // deletando os dados via formulário
