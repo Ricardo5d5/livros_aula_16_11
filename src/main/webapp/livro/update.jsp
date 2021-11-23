@@ -15,20 +15,21 @@
         <h1>Editar Livro</h1>   <!-- Exibe um título h1 -->
         <hr>    <!-- Mostra uma linha horizontal no documento -->
         <form action="/livro/update" method="post"> <!-- Define o formulário de exclusão -->
-            <input type="hidden" name="id" value="${livro.id}" />
+            <input type="hidden" name="id" value="${livro.id}" />   <!-- Cria um campo de texto oculto que automaticamente recebe o valor do id do livro -->
             <label for="titulo">Título</label>  <!-- Define um rótulo para o input -->
 
             <input type="text" name="titulo" value="${livro.titulo}" />  <!-- Fornece um campo para entrada de dados, no caso o nome de um livro que deseja inserir -->
-            <a href="/livro/list" class="btn btn-warning">Voltar</a>
-            <input type="submit" value="Salvar" class="btn btn-success" />
-        </form>
+            <a href="/livro/list" class="btn btn-warning">Voltar</a>    <!-- Exibe um botão estilizado com bootstrap para voltar a página -->
+            <input type="submit" value="Salvar" class="btn btn-success" />  <!-- Define um botão estilizado com o bootstrap para enviar os dados presentes no formulário -->
+        </form> <!-- Fecha a tag form -->
+        <!-- Importação dos scripts do bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
             integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous"></script>   <!-- Declara o separate -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
             integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous"></script>   <!-- Declara o separate -->
 
-    </body>
+    </body> <!-- Fecha a tag body -->
 
-    </html>
+    </html> <!-- Fecha a tag html -->
