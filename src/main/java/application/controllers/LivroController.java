@@ -14,18 +14,18 @@ import application.repositories.LivroRepository;  // Importa o repositório Livr
 import org.springframework.ui.Model;  // Importa um kit de ui do springframework.
 
 @Controller // A anotação @Controller indica que a classe é um “Controller” controlador, atuando como um estereótipo para a classe anotada, indicando o seu papel (dentro do contexto do padrão MVC ele é o 'C').
-@RequestMapping("/livro") //A anotação @RequestMapping indica que o controlador, que neste caso é a classe "LivroController", receberá as requisições feitas à URL www.DNS_da_aplicação/LivroController.
+@RequestMapping("/livro") // *****A anotação @RequestMapping indica que o controlador, que neste caso é a classe "LivroController", receberá as requisições feitas à URL www.DNS_da_aplicação/LivroController.
 public class LivroController {  // Cria a classe pública LivroController e abre o escopo de corpo dela.
   @Autowired  // O Autowired (@Autowired) é a anotação mais utiliza com relação a injeção de dependências. Como o próprio nome diz, o Autowired, indica um ponto aonde a injeção automática deve ser aplicada.
-  private LivroRepository livrosRepo; //Cria um objeto privado chamado livrosRepo do tipo LivroRepository.
+  private LivroRepository livrosRepo; // Cria um objeto privado chamado "livrosRepo" do tipo "LivroRepository".
 
-  @RequestMapping("/list")  //O método "list" também está anotado com a anotação @RequestMapping, indicando que esse método irá receber as requisições feitas a URL www.DNS_da_aplicação/LvroController sempre que se tratar de uma requisição HTTP GET.
-  public String list(Model model) { // Cria uma função de retorno público de tipo String com o nome list, com o parâmetro model do tipo Model, que serve para listar todos livros.
-    model.addAttribute("livros", livrosRepo.findAll()); // Adiciona o atributo livros ao modelo e preenche com todos livros do livrosRepo.
-    return "list.jsp";  // Indica o retorno do arquivo "list.jsp", Retorna uma string referente à página que mostrará os dados obtidos.
+  @RequestMapping("/list")  // ****O método "list" também está anotado com a anotação @RequestMapping, indicando que esse método irá receber as requisições feitas a URL www.DNS_da_aplicação/LvroController sempre que se tratar de uma requisição HTTP GET.
+  public String list(Model model) { // Cria uma função de retorno público de tipo String com o nome "list", com o parâmetro model do tipo Model, que serve para listar todos livros.
+    model.addAttribute("livros", livrosRepo.findAll()); // Adiciona o atributo "livros" ao modelo e preenche com todos livros do "livrosRepo".
+    return "list.jsp";  // Indica o retorno o endereço do arquivo "list.jsp".
   }
 
-  public String listar() {  // Cria uma função de retorno público de tipo String com o nome listar, sem parâmetros, que serve para listar todos livros dentro do "/livro".
+  public String listar() {  // Cria uma função de retorno público de tipo String com o nome "listar: , sem parâmetros, que serve para listar todos livros dentro do "/livro".
     return "livro/list.jsp";  //*********Retorna uma string referente à página que redirecionar ao método responsável pela listagem.
   }
 

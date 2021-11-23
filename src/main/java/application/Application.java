@@ -1,4 +1,4 @@
-package application;    // Define o pacote da aplicação como application.
+package application;    // Define o pacote da aplicação como "application".
 
 import org.springframework.boot.SpringApplication;  // Importa o utilitário SpringApplication do springframework.
 import org.springframework.boot.autoconfigure.SpringBootApplication;    // Importa SpringBootApplication o utilitário do springframework.

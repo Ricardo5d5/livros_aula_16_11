@@ -1,4 +1,4 @@
-package application.controllers;    // Pacote application e indica em qual pacote este controllers (Controlador) estará localizado.
+package application.controllers;    // Pacote "application.controllers" e indica em qual pacote este "controllers" (Controlador) estará localizado.
 
 import org.springframework.stereotype.Controller;   // Importa o pacote de Mapeamento de Requisições do Framework Spring.
 import org.springframework.web.bind.annotation.RequestMapping;  // Importa do RequestMapping, é usado para mapear solicitações da web em métodos manipuladores em classes de manipulação de solicitações.

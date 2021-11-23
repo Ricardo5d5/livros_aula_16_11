@@ -1,19 +1,19 @@
-package application.models;
+package application.models; // Pacote "application.models" e indica em qual pacote este "models" estará localizado.
 
-
+// Diversos imports do Java X
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="livros")
-public class Livro {
+@Entity // Especifica que a classe é uma entidade. Esta anotação é aplicada à classe de entidade.
+@Table(name="livros")   // Especifica a tabela primária para a entidade anotada.
+public class Livro {    // Cria uma classe pública chamada de "Livro".
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @Id // Especifica a chave primária de uma entidade.
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Fornece a especificação de estratégias de geração de valores de chaves primárias.
+    private int id; // Cria uma variável private do tipo int (integer) chamada de "id".
     private String titulo;
 
     public int getId() {
