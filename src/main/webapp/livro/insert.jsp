@@ -25,6 +25,7 @@
             <input type="submit" value="Salvar" class="btn btn-warning" /-->
             <input type="submit" value="Salvar" class="btn btn-success"/>   <!-- define um botão estilizado com o bootstrap para enviar os dados presentes no formulário -->
         </form>  <!-- fecha a tag form -->
+        <!-- Importação dos scripts do bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
             integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
             crossorigin="anonymous"></script>   <!-- Declara o separate -->
