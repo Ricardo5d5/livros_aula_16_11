@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;  // Importa o Reque
 import org.springframework.web.bind.annotation.PathVariable;  // Importa o PathVariable do springframerwork.
 
 import application.models.Livro;  // Importa o modelo Livro da application.
-import application.repositories.LivroRepository;  // Importa o repositório LivroRepository da application.
+import application.repositories.LivroRepository;  // Importa o repositório LivroRepository da application.repositories.
 import org.springframework.ui.Model;  // Importa um kit de ui do springframework.
 
 @Controller // A anotação @Controller indica que a classe é um “Controller” controlador, atuando como um estereótipo para a classe anotada, indicando o seu papel (dentro do contexto do padrão MVC ele é o 'C').
