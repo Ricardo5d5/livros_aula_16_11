@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod; // Importa o pacot
 import org.springframework.web.bind.annotation.RequestParam;  // Importa o RequestParam do springframerwork.
 import org.springframework.web.bind.annotation.PathVariable;  // Importa o PathVariable do springframerwork.
 
-import application.models.Livro;  // Importa o modelo Livro da aplicação.
-import application.repositories.LivroRepository;  // Importa o repositório LivroRepository da aplicação.
-import org.springframework.ui.Model;  // Importa um kit de ui do framework spring
+import application.models.Livro;  // Importa o modelo Livro da application.
+import application.repositories.LivroRepository;  // Importa o repositório LivroRepository da application.
+import org.springframework.ui.Model;  // Importa um kit de ui do springframework.
 
 @Controller // A anotação @Controller indica que a classe é um “Controller” controlador, atuando como um estereótipo para a classe anotada, indicando o seu papel (dentro do contexto do padrão MVC ele é o 'C').
 @RequestMapping("/livro") //A anotação @RequestMapping indica que o controlador, que neste caso é a classe "LivroController", receberá as requisições feitas à URL www.DNS_da_aplicação/LivroController.
