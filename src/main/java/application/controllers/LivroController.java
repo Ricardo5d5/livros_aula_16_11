@@ -1,13 +1,13 @@
 package application.controllers;    // Pacote application e indica em qual pacote este controllers (Controlador) estará localizado.
 
-import java.util.Optional;  // Improta um pacote opcional do java.util (Que possui muitas utilidades).
+import java.util.Optional;  // Improta um pacote "Optinal" do java.util.
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;  // Importa o Autowired do springframerwork.
 import org.springframework.stereotype.Controller; // Importa o pacote de Mapeamento de Requisições do Framework Spring.
-import org.springframework.web.bind.annotation.RequestMapping;  //import do RequestMapping, é usado para mapear solicitações da web em métodos manipuladores em classes de manipulação de solicitações.
+import org.springframework.web.bind.annotation.RequestMapping;  // Importa do RequestMapping, é usado para mapear solicitações da web em métodos manipuladores em classes de manipulação de solicitações.
 import org.springframework.web.bind.annotation.RequestMethod; // Importa o pacote de Métodos de Requisição (GET, POST, DELETE, PUT, ETC) do Framework Spring.
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;  // Importa o RequestParam do springframerwork.
+import org.springframework.web.bind.annotation.PathVariable;  // Importa o PathVariable do springframerwork.
 
 import application.models.Livro;  // Importa o modelo Livro da aplicação.
 import application.repositories.LivroRepository;  // Importa o repositório LivroRepository da aplicação.
