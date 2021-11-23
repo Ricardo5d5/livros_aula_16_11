@@ -1,4 +1,5 @@
 
+# Os arquivos mencionados no ".gitignore" serão ignorados pelo git
 .gradle
 **/build/
 !src/**/build/

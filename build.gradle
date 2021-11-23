@@ -1,17 +1,17 @@
 plugins {
-    id 'org.springframework.boot' version '2.3.0.RELEASE'
-    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
-    id 'java'
+    id 'org.springframework.boot' version '2.3.0.RELEASE'   //Adicionando o plugin spring boot ao projeto na versão 2.3.0 release
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'    //Adicionando o plugin dependency manegement ao projeto na versão 1.0.9 release
+    id 'java'   //Adicionando o plugin do java ao projeto
 }
 
-repositories {
+repositories {  // Declarando o repositório do jcenter para o projeto
     jcenter()
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'mysql:mysql-connector-java'
-    implementation 'javax.servlet:jstl:1.2'
-    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    implementation 'org.springframework.boot:spring-boot-starter-web'   //Adicionando dependencia starter web do spring boot
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'  //adicionando dependencia starter data jpa do spring boot
+    implementation 'mysql:mysql-connector-java' //Adicionando dependencia mysql connector java do mysql
+    implementation 'javax.servlet:jstl:1.2' //Adicionando dependencia servlet do java   
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'    //Adicionando dependencia tomcat embed jasper do apache
 }
